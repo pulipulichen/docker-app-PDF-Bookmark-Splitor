@@ -91,7 +91,7 @@ let main = async function () {
 			}
 
 			titleData[i].pages = (nextPage - titleData[i].page)
-			let {title} = titleData[i]
+			let {title, page} = titleData[i]
 			titleData[i].filename = `${page}-${(nextPage - 1)} ${title}`
 		}
 
