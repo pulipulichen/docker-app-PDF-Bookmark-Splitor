@@ -1,0 +1,10 @@
+version: "3"
+services:
+  app:
+    build: .
+    tty: true
+    command: node /app/split-pdf.js "/input/c4611 sample explain.pdf"
+    volumes: 
+      - ./app:/app/
+      - ./cache:/cache/
+      - /tmp/tmp.today/20230105-0428/:/input/

@@ -1,0 +1,10 @@
+version: "3"
+services:
+  app:
+    build: .
+    tty: true
+    command: node /app/split-pdf-bookmarks.js "/input/[INPUT]"
+    volumes: 
+      - ./app:/app/
+      - ./cache:/cache/
+      - [SOURCE]:/input/

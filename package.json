@@ -1,0 +1,30 @@
+{
+  "name": "docker-app-PDF-Bookmark-Splitor",
+  "version": "1.0.0",
+  "description": "To split a PDF file by its bookmarks.",
+  "main": "index.js",
+  "scripts": {
+    "d0.build": "docker-compose build",
+    "d1.bash": "docker-compose run app bash",
+    "start": "docker-compose up",
+    "update": "node update.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://pulipuli.chen@gmail.com@github.com/pulipulichen/docker-app-PDF-Bookmark-Splitor.git"
+  },
+  "keywords": [
+    "PWA"
+  ],
+  "author": "Pulipuli Chen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pulipulichen/docker-app-PDF-Bookmark-Splitor/issues"
+  },
+  "homepage": "https://github.com/pulipulichen/docker-app-PDF-Bookmark-Splitor#readme",
+  "devDependencies": {
+  },
+  "dependencies": {
+    "pdf-page-counter": "1.0.3"
+  }
+}
