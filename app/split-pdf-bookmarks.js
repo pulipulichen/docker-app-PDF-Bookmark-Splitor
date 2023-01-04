@@ -104,7 +104,7 @@ let main = async function () {
 			let nextPage = titleData[0].page
 			titleData.unshift({
 				page: 1,
-				filename: `${page}-${nextPage - 1}_Cover`
+				filename: `1-${nextPage - 1}_Cover`
 			})
 		}
 
