@@ -70,7 +70,6 @@ let main = async function () {
 			// titles.push(`${titlePrefix} ${title} (${page})`)
 			titleData.push({
 				title,
-				filename: title,
 				level,
 				page,
 				titlePrefix
@@ -92,6 +91,8 @@ let main = async function () {
 			}
 
 			titleData[i].pages = (nextPage - titleData[i].page)
+			let {title} = titleData[i]
+			titleData[i].filename = `${page}-${(nextPage - 1)} ${title}`
 		}
 
 		await SplitPDF(file, titleData)
