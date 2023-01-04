@@ -55,7 +55,7 @@ let main = async function () {
 			level = level.slice(level.indexOf(':')+1).trim()
 			level = Number(level)
 
-			if (level !== 1) {
+			if (level !== 2) {
 				return false
 			}
 
