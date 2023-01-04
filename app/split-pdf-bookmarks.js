@@ -55,6 +55,10 @@ let main = async function () {
 			level = level.slice(level.indexOf(':')+1).trim()
 			level = Number(level)
 
+			if (level !== 1) {
+				return false
+			}
+
 			let page = lines[2]
 			page = page.slice(page.indexOf(':')+1).trim()
 			page = Number(page)
