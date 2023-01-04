@@ -92,7 +92,12 @@ let main = async function () {
 
 			titleData[i].pages = (nextPage - titleData[i].page)
 			let {title, page} = titleData[i]
-			titleData[i].filename = `${page}-${(nextPage - 1)} ${title}`
+
+			let end = (nextPage - 1)
+			if (i === titleData.length - 1) {
+				end++
+			}
+			titleData[i].filename = `${page}-${end} ${title}`
 		}
 
 		await SplitPDF(file, titleData)
