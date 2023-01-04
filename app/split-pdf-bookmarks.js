@@ -97,7 +97,15 @@ let main = async function () {
 			if (i === titleData.length - 1) {
 				end++
 			}
-			titleData[i].filename = `${page}-${end} ${title}`
+			titleData[i].filename = `${page}-${end}_${title}`
+		}
+
+		if (titleData[0].page !== 1) {
+			let nextPage = titleData[0].page
+			titleData.unshift({
+				page: 1,
+				filename: `${page}-${nextPage - 1}_Cover`
+			})
 		}
 
 		await SplitPDF(file, titleData)
