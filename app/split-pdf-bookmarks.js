@@ -23,7 +23,8 @@ let main = async function () {
     }
 
 		// let cmd = `qpdf --json "${file}" | jq '.objects' | grep -Po 'Title": \\K.*'`
-		let cmd = `pdftk "${file}" dump_data_utf8 | grep '^Bookmark'`
+		// let cmd = `pdftk "${file}" dump_data_utf8 | grep '^Bookmark'`
+		let cmd = `pdftk "${file}" dump_data | grep '^Bookmark'`
 		let result = await ShellExec(cmd)
 		let titles = []
 		let titleData = []
