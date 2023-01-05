@@ -81,7 +81,8 @@ let main = async function () {
 			})
 		})
 
-		let cmdPageNumber = `pdftk "${file}" dump_data_utf8 | grep 'NumberOfPages'`
+		// let cmdPageNumber = `pdftk "${file}" dump_data_utf8 | grep 'NumberOfPages'`
+		let cmdPageNumber = `pdftk "${file}" dump_data | grep 'NumberOfPages'`
 		let numberOfPages = await ShellExec(cmdPageNumber)
 		numberOfPages = numberOfPages.slice(numberOfPages.indexOf(':')+1).trim()
 		numberOfPages = Number(numberOfPages)
