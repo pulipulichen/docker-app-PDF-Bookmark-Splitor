@@ -40,6 +40,12 @@ module.exports = async function (inputFile, splitInformation) {
 		outputName = outputName.replace(/:/g, '.')
 		outputName = outputName.replace(/\?/g, '')
 		outputName = outputName.replace(/•/g, '-')
+		outputName = outputName.replace(/\n/g, ' ')
+		outputName = outputName.replace(/\r/g, ' ')
+
+		while (outputName.indexOf('  ') > -1) {
+			outputName = outputName.replace(/  /g, ' ')
+		}
 		
 
     outputName = outputName + '.pdf'

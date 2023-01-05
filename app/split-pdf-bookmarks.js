@@ -55,7 +55,7 @@ let main = async function () {
 			level = level.slice(level.indexOf(':')+1).trim()
 			level = Number(level)
 
-			if (level !== 2) {
+			if (level !== 1) {
 				return false
 			}
 
@@ -104,7 +104,7 @@ let main = async function () {
 			titleData[i].filename = `${page}-${end}_${title}`
 		}
 
-		if (titleData[0].page !== 1) {
+		if (titleData[0] && titleData[0].page !== 1) {
 			let nextPage = titleData[0].page
 			titleData.unshift({
 				page: 1,
