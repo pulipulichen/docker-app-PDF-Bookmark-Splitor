@@ -1,4 +1,4 @@
-FROM node:18.12.1-buster
+FROM node:18.12-bullseye
 
 RUN apt-get update
 
