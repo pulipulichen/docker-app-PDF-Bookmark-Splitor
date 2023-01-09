@@ -121,7 +121,7 @@ let main = async function () {
 				end++
 			}
 			// titleData[i].filename = `${page}-${end}_${title}`
-			titleData[i].filename = `${(i+1)}-${end-start+1}_${title}`
+			titleData[i].filename = `${(i+1)}-${end-page+1}_${title}`
 		}
 
 		if (titleData[0] && titleData[0].page !== 1) {
