@@ -1,7 +1,7 @@
 version: "3"
 services:
   app:
-    image: pudding/docker-app:docker-app-PDF-Bookmark-Splitor-20250623.080037
+    image: pudding/docker-app:docker-app-PDF-Bookmark-Splitor-20250623.080058
     tty: true
     user: "${UID}:${GID}"
     command: node /app/index.js "/input/__INPUT__"
