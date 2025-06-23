@@ -4,9 +4,10 @@
   "description": "To split a PDF file by its bookmarks.",
   "main": "index.js",
   "scripts": {
-    "d0.build": "docker-compose build",
-    "d1.bash": "docker-compose run app bash",
-    "start": "docker-compose up",
+    "commit-docker-image": "sudo docker compose build; bash ./docker-build/image/commit-docker-image.sh",
+    "d0.build": "sudo docker compose build",
+    "d1.bash": "sudo docker compose run app bash",
+    "start": "sudo docker compose up",
     "update": "node update.js"
   },
   "repository": {

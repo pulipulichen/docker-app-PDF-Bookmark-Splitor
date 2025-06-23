@@ -3,6 +3,7 @@ services:
   app:
     build: .
     tty: true
+    user: "${UID}:${GID}"
     command: node /app/split-pdf.js "/input/c4611 sample explain.pdf"
     volumes: 
       - ./app:/app/
